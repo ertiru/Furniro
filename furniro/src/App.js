@@ -9,7 +9,6 @@ import SinglePr from "./Pages/SinglePr";
 import Compare from "./Pages/Compare";
 import Checkout from "./Pages/Checkout";
 import Login from "./Pages/User";
-import ShopCart from "./Components/ShopCart/ShopCart";
 
 function App() {
   return (

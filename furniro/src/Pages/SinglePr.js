@@ -45,7 +45,7 @@ const SinglePr = () => {
       <div className="container">
         <Header />
         <div className="rowpr singleprod">
-          <img src={product.img}></img>
+          <img src={product.img} alt="prod"></img>
           <div className="prdesc">
             <div>
               <h1>{product.prname}</h1>

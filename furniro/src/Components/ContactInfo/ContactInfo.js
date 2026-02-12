@@ -11,7 +11,7 @@ const ContactInfo = () => {
           <div className="infos">
             <div className="kolon">
               <div>
-                <img src={location} />
+                <img src={location} alt="lok" />
               </div>
               <div>
                 <h3>Address</h3>
@@ -20,7 +20,7 @@ const ContactInfo = () => {
             </div>
             <div className="kolon">
               <div>
-                <img src={phone} />
+                <img src={phone} alt="phone" />
               </div>
               <div>
                 <h3>Phone</h3>
@@ -33,7 +33,7 @@ const ContactInfo = () => {
             </div>
             <div className="kolon">
               <div>
-                <img src={clock} />
+                <img src={clock} alt="clock" />
               </div>
               <div>
                 <h3>Working Time</h3>

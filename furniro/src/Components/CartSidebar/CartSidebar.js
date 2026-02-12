@@ -7,17 +7,6 @@ import { Link } from "react-router-dom";
 const CartSidebar = ({ onClose }) => {
   const { cart, removeFromCart } = useContext(CartContext);
 
-  const [quantities, setQuantities] = useState(
-    cart.reduce((acc, item) => ({ ...acc, [item.id]: 1 }), {}),
-  );
-
-  const handleQuantityChange = (id, value) => {
-    const num = Number(value);
-    if (num >= 1 && num <= 9999) {
-      setQuantities((prev) => ({ ...prev, [id]: num }));
-    }
-  };
-
   return (
     <div className="overlayside" onClick={onClose}>
       <div className="cartbar" onClick={(e) => e.stopPropagation()}>
@@ -60,6 +49,7 @@ const CartSidebar = ({ onClose }) => {
                       height="20"
                       src={delet}
                       style={{ cursor: "pointer" }}
+                      alt=""
                     />
                   </div>
                 );
