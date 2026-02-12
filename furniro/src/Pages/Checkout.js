@@ -7,7 +7,7 @@ import Footer from "../Components/Footer/Footer";
 
 const Checkout = () => {
   const { cart } = useContext(CartContext);
-
+  const [sasia, setsasia] = useState(1);
   const totalPrice = cart.reduce((sum, item) => {
     const numericPrice = Number(item.price.replace("$", ""));
     const quantity = sasia[item.id] ?? 1;
