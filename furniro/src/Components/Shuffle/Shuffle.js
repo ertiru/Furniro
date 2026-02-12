@@ -35,8 +35,8 @@ const Shuffle = () => {
   };
 
   return (
-    <div className="produkt">
-      <div className="container">
+    <div className="container">
+      <div className="filtro">
         <div className="filter">
           <div>
             <label>
@@ -70,74 +70,74 @@ const Shuffle = () => {
             </select>
           </div>
         </div>
+      </div>
 
-        {currentProducts.length === 0 ? (
-          <p className="no">No products.</p>
-        ) : (
-          <div className="rowpr">
-            {currentProducts.map((item) => (
-              <div className="card" key={item.id}>
-                <img src={item.img} alt={item.prname} />
+      {currentProducts.length === 0 ? (
+        <p className="no">No products.</p>
+      ) : (
+        <div className="rowpr">
+          {currentProducts.map((item) => (
+            <div className="card" key={item.id}>
+              <img src={item.img} alt={item.prname} />
 
-                {item.discount && <p className="discount">{item.discount}</p>}
-                {item.isnew && <p className="isnew">{item.isnew}</p>}
+              {item.discount && <p className="discount">{item.discount}</p>}
+              {item.isnew && <p className="isnew">{item.isnew}</p>}
 
-                <div className="infopr">
-                  <h3>{item.prname}</h3>
-                  <p>{item.desc}</p>
-                  <div className="row1">
-                    <h4>${item.price}</h4>
-                    {item.discount && (
-                      <p className="oldprice">${item.oldprice}</p>
-                    )}
-                  </div>
-                </div>
-
-                <div className="overlay">
-                  <button onClick={() => addToCart(item)} className="add">
-                    Add to cart
-                  </button>
-                  <div className="spanrow">
-                    <span>
-                      <img src={share} alt="share" /> Share
-                    </span>
-                    <span>
-                      <img src={compare} alt="compare" /> Compare
-                    </span>
-                    <span>
-                      <img
-                        src={likedProducts[item.id] ? likedpr : like}
-                        onClick={() => likeit(item.id)}
-                        alt="like"
-                      />
-                      {likedProducts[item.id] ? "Liked" : "Like"}
-                    </span>
-                  </div>
-                  <Link to={`/products/${item.prname}`} className="linku">
-                    Go to product
-                  </Link>
+              <div className="infopr">
+                <h3>{item.prname}</h3>
+                <p>{item.desc}</p>
+                <div className="row1">
+                  <h4>${item.price}</h4>
+                  {item.discount && (
+                    <p className="oldprice">${item.oldprice}</p>
+                  )}
                 </div>
               </div>
-            ))}
-          </div>
-        )}
 
-        <div className="pagination">
-          <button disabled={page === 1} onClick={() => setPage(page - 1)}>
-            Prev
-          </button>
-
-          <span>
-            Page {page} of {totalPages || 1}
-          </span>
-
-          <button
-            disabled={page === totalPages}
-            onClick={() => setPage(page + 1)}
-          >
-            Next
-          </button>
+              <div className="overlay">
+                <button onClick={() => addToCart(item)} className="add">
+                  Add to cart
+                </button>
+                <div className="spanrow">
+                  <span>
+                    <img src={share} alt="share" /> Share
+                  </span>
+                  <span>
+                    <img src={compare} alt="compare" /> Compare
+                  </span>
+                  <span>
+                    <img
+                      src={likedProducts[item.id] ? likedpr : like}
+                      onClick={() => likeit(item.id)}
+                      alt="like"
+                    />
+                    {likedProducts[item.id] ? "Liked" : "Like"}
+                  </span>
+                </div>
+                <Link to={`/products/${item.prname}`} className="linku">
+                  Go to product
+                </Link>
+              </div>
+            </div>
+          ))}
         </div>
+      )}
+
+      <div className="pagination">
+        <button disabled={page === 1} onClick={() => setPage(page - 1)}>
+          Prev
+        </button>
+
+        <span>
+          Page {page} of {totalPages || 1}
+        </span>
+
+        <button
+          disabled={page === totalPages}
+          onClick={() => setPage(page + 1)}
+        >
+          Next
+        </button>
       </div>
     </div>
   );
