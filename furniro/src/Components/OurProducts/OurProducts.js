@@ -1,12 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import Products from "./OurProductsData";
 
 import { Link } from "react-router-dom";
 
 const OurProducts = () => {
-  const [liked, setLiked] = useState(false);
-  const likeit = () => setLiked(!liked);
-
   return (
     <div className="produkt">
       <div className="container">
