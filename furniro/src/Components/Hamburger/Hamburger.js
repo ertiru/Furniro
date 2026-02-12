@@ -1,10 +1,9 @@
 import React from "react";
-import logo from "../../assets/logo.png";
+
 import user from "../../assets/user.png";
 import cart from "../../assets/cart.png";
-import { useState } from "react";
+
 import { Link } from "react-router-dom";
-import CartSidebar from "../CartSidebar/CartSidebar";
 
 const Hamburger = () => {
   return (

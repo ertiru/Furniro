@@ -10,7 +10,7 @@ const Compare = () => {
       <div className="row gridi">
         <div>
           <h1>Go to Products Page for more</h1>
-          <a>View more</a>
+          <p>View more</p>
         </div>
         <div>Product 1</div>
         <div>Product 1</div>

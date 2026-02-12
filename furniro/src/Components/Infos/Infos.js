@@ -7,7 +7,7 @@ const Infos = () => {
       <div className="container">
         {InfoData.map((item, index) => (
           <div className="info-item">
-            <img src={item.img} height="45px" />
+            <img src={item.img} height="45px" alt="" />
             <div className="item">
               <h1>{item.head}</h1>
               <p>{item.desc}</p>

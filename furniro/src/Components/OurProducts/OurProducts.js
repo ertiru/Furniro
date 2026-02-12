@@ -1,9 +1,6 @@
 import React, { useState } from "react";
 import Products from "./OurProductsData";
-import share from "../../assets/compare.png";
-import compare from "../../assets/compare.png";
-import likedpr from "../../assets/liked.png";
-import like from "../../assets/like.png";
+
 import { Link } from "react-router-dom";
 
 const OurProducts = () => {

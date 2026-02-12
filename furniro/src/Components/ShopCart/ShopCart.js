@@ -73,6 +73,7 @@ const ShopCart = () => {
                     width="21px"
                     height="21.88px"
                     src={delet}
+                    alt=""
                   />
                 </div>
               ))}
