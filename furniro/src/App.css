@@ -1106,6 +1106,9 @@ input[type="radio"] {
   .container .navmore {
     display: none;
   }
+  .banner {
+    height: calc(100vh - 20px);
+  }
   .discover {
     width: 90%;
     margin: 0 auto;
